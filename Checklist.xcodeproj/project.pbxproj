@@ -15,6 +15,7 @@
 		BF1CBE8F22AE70090030A7CD /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CBE8E22AE70090030A7CD /* ChecklistItem.swift */; };
 		BF1CBE9122AE72F30030A7CD /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1CBE9022AE72F30030A7CD /* TodoList.swift */; };
 		BF282B3D22AFA3AE00576957 /* ChecklistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF282B3C22AFA3AE00576957 /* ChecklistTableViewCell.swift */; };
+		BF3A0D4E22B1FC2100B44F2F /* Checklist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF3A0D4C22B1FC2100B44F2F /* Checklist.xcdatamodeld */; };
 		BFD7185C22AF613B004956AD /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD7185B22AF613B004956AD /* ItemDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		BF1CBE8E22AE70090030A7CD /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		BF1CBE9022AE72F30030A7CD /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		BF282B3C22AFA3AE00576957 /* ChecklistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTableViewCell.swift; sourceTree = "<group>"; };
+		BF3A0D4D22B1FC2100B44F2F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BFD7185B22AF613B004956AD /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,15 +65,16 @@
 			isa = PBXGroup;
 			children = (
 				9E39EE6522AD27000043C9EF /* AppDelegate.swift */,
-				9E39EE6722AD27000043C9EF /* ChecklistViewController.swift */,
-				BFD7185B22AF613B004956AD /* ItemDetailViewController.swift */,
-				BF1CBE9022AE72F30030A7CD /* TodoList.swift */,
-				BF282B3C22AFA3AE00576957 /* ChecklistTableViewCell.swift */,
-				BF1CBE8E22AE70090030A7CD /* ChecklistItem.swift */,
-				9E39EE6922AD27000043C9EF /* Main.storyboard */,
 				9E39EE6C22AD27010043C9EF /* Assets.xcassets */,
-				9E39EE6E22AD27010043C9EF /* LaunchScreen.storyboard */,
+				BF1CBE8E22AE70090030A7CD /* ChecklistItem.swift */,
+				BF282B3C22AFA3AE00576957 /* ChecklistTableViewCell.swift */,
+				9E39EE6722AD27000043C9EF /* ChecklistViewController.swift */,
 				9E39EE7122AD27010043C9EF /* Info.plist */,
+				BFD7185B22AF613B004956AD /* ItemDetailViewController.swift */,
+				9E39EE6E22AD27010043C9EF /* LaunchScreen.storyboard */,
+				9E39EE6922AD27000043C9EF /* Main.storyboard */,
+				BF3A0D4C22B1FC2100B44F2F /* Checklist.xcdatamodeld */,
+				BF1CBE9022AE72F30030A7CD /* TodoList.swift */,
 			);
 			path = Checklist;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF3A0D4E22B1FC2100B44F2F /* Checklist.xcdatamodeld in Sources */,
 				9E39EE6822AD27000043C9EF /* ChecklistViewController.swift in Sources */,
 				BFD7185C22AF613B004956AD /* ItemDetailViewController.swift in Sources */,
 				BF1CBE8F22AE70090030A7CD /* ChecklistItem.swift in Sources */,
@@ -297,6 +301,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3SLQ22F6VY;
 				INFOPLIST_FILE = Checklist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -314,6 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3SLQ22F6VY;
 				INFOPLIST_FILE = Checklist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -348,6 +354,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF3A0D4C22B1FC2100B44F2F /* Checklist.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF3A0D4D22B1FC2100B44F2F /* Model.xcdatamodel */,
+			);
+			currentVersion = BF3A0D4D22B1FC2100B44F2F /* Model.xcdatamodel */;
+			path = Checklist.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9E39EE5A22AD27000043C9EF /* Project object */;
 }

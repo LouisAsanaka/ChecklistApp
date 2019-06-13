@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ChecklistViewController: UITableViewController {
     
@@ -36,6 +37,26 @@ class ChecklistViewController: UITableViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.leftBarButtonItem = editButtonItem
         tableView.allowsMultipleSelectionDuringEditing = true
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "TodoItem")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            var arr = [ChecklistItem?](repeating: nil, count: result.count)
+            print("Loading \(result.count) saved tasks...")
+            for data in result as! [NSManagedObject] {
+                let index: Int = data.value(forKey: "index") as! Int
+                arr[index] = ChecklistItem(
+                    text: data.value(forKey: "title") as! String,
+                    checked: data.value(forKey: "checked") as! Bool
+                )
+            }
+            todos.todos = arr as! [ChecklistItem]
+        } catch {
+            print("Failed")
+        }
     }
     
     override func setEditing(_ editing: Bool, animated: Bool) {
